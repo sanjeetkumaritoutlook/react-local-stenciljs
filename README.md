@@ -1,3 +1,28 @@
+#Jquery to Angular to React Transition
+https://medium.com/hoopeez/the-deep-dive-transitioning-to-react-5917eda01ebf
+ost React applications are modeled on Flux design pattern).
+ React is mostly the V in MVC. Since it is a library, you can include it in applications built using other technologies.
+
+
+#Babel
+JSX is rewritten to JavaScript. This can be done with babel or webpack internals.
+
+Babel is used to transpile the JavaScript code, making it compatible with older browsers,
+ while Webpack is used to bundle and optimize the code. 
+ 
+# resulting file is then bundled for the browser, using either webpack or browserify
+
+Class components older version of React
+Functional component in new version
+curent version Teact v18.3
+use Function components along with Hooks, which were added in React 16.8.
+React 19 beta has support for custom Elements
+
+#With introduction to the React 16, writing functional components is the standard way of creating components in modern react applications.
+https://blog.weareredlight.com/the-rise-of-functional-components-react-v16-7-0-now-with-hooks-90cac72b8ab7?gi=27c595b1ced0
+
+ 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

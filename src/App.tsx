@@ -19,6 +19,10 @@ function App() {
     <search-world search-text="bmw"> </search-world>
     <my-payment-gateway></my-payment-gateway>
     <my-component first="Sanjeet" last="Kumar"></my-component>
+    <simple-form></simple-form>
+    <custom-form></custom-form>
+    <complex-ionic-form></complex-ionic-form>
+   <combo-box allow-input='true' label='Album:'></combo-box>
       </div>
   );
 }

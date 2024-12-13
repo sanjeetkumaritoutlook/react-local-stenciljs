@@ -45,6 +45,12 @@ jobs:
           git fetch --prune --unshallow
           git worktree remove gh-pages --force || true
 
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: build  # The folder containing your build output
+
       # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4

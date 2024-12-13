@@ -1,7 +1,7 @@
 //import * as React from 'react';
-import React, {Component} from 'react';
-import { useState,useEffect } from "react";
-import { useNavigate,useParams } from 'react-router-dom';
+import React from 'react';
+import { useState } from "react";
+//import { useNavigate,useParams } from 'react-router-dom';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
  function Header() {

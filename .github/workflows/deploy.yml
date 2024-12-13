@@ -32,14 +32,19 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
       # Step 4: Build the React app
       - name: Build the app
         run: npm run build
 
+      # Add a cleanup step to avoid old deployment data
+      - name: Clean up previous deployment
+        run: |
+          git fetch --prune --unshallow
+          git worktree remove gh-pages --force || true
+
       # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: actions/deploy-pages@v4
         with:
-          branch: gh-pages  # The branch to deploy to
-          folder: build     # The folder containing the built React app (default is 'build')
           token: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub

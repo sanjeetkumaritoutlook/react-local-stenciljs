@@ -51,10 +51,12 @@ jobs:
         with:
           name: github-pages
           path: build  # The folder containing your build output
-
-      # Step 5: Deploy to GitHub Pages
+     #When React builds the app, it generates relative paths based on the homepage field. Without this field, the paths default to /, causing errors when served from a subpath like /repository-name.
+     #Set the homepage Field in package.json
+     #React assumes it is being served from the root of the domain (/), but GitHub Pages serves the app from a subpath like /repository-name. 
+     # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub
-          publish_dir: build
+          

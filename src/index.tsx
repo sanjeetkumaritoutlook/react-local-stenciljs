@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { useCustomElementRef, fluid } from './fluid'; // Replaced by @lmig/fluid-react-utils
 import { useEffect, useRef } from 'react';
-
+import { defineCustomElements } from 'stenciljs-components/loader';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
   // ---- Initialise FLUID
@@ -13,7 +13,8 @@ const root = ReactDOM.createRoot(
 // useEffect(() => fluid.init(env), []);
 // ---- Start Building
 );
-
+// Initialize the custom elements
+defineCustomElements(window);
 
 root.render(
   <React.StrictMode>

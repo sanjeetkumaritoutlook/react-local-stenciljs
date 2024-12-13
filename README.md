@@ -27,6 +27,14 @@ https://blog.weareredlight.com/the-rise-of-functional-components-react-v16-7-0-n
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Create new React App in Typescript
+npx create-react-app my-app --template typescript
+
+https://builtin.com/software-engineering-perspectives/create-react-app-typescript
+
+# create React component in typescript
+https://react.dev/learn/typescript
+
 ## Available Scripts
 
 In the project directory, you can run:

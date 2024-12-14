@@ -1,0 +1,54 @@
+/* Nav container */
+nav {
+    background-color: #2c3e50;  /* Dark background */
+    padding: 10px 20px;         /* Space around the nav */
+    border-radius: 8px;         /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Unordered list styles */
+  nav ul {
+    list-style: none;           /* Remove bullets */
+    display: flex;               /* Align items horizontally */
+    justify-content: center;     /* Center items horizontally */
+    margin: 0;                   /* Remove default margin */
+    padding: 0;                  /* Remove default padding */
+  }
+  
+  /* List item styles */
+  nav ul li {
+    margin: 0 15px;              /* Space between links */
+  }
+  
+  /* Link styles */
+  nav ul li a {
+    text-decoration: none;       /* Remove underline */
+    color: white;                /* White text */
+    font-size: 18px;             /* Larger font size */
+    font-weight: bold;           /* Bold font */
+    padding: 8px 16px;           /* Space around the text */
+    border-radius: 4px;          /* Rounded corners for each link */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Link hover styles */
+  nav ul li a:hover {
+    background-color: #3498db;   /* Blue background on hover */
+    transform: scale(1.1);        /* Slightly enlarge on hover */
+  }
+  
+  /* Link active styles */
+  nav ul li a.active {
+    color: #e74c3c;              /* Red color when active */
+    border-bottom: 3px solid #e74c3c; /* Red underline when active */
+  }
+/*
+Explanation of the Styles:
+-------------
+1.nav: The background-color is set to a dark shade for a modern look, and box-shadow adds a subtle depth effect.
+2.ul: Flexbox is used to horizontally align the items and justify-content: center centers the links.
+3.li: Margin is used to space the links apart.
+4.a: The links have no underline by default, and the text is white for contrast against the dark background. The border-radius adds rounded corners to the links for a soft look.
+5.Hover Effect: When you hover over a link, it changes the background color and slightly enlarges to create a "pop" effect.
+6.Active Link: If you want the active link to be highlighted, you can apply the .active class in React based on the current route (this will be added dynamically as the user navigates).
+*/  

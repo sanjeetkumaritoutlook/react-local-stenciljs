@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
-
+//AWS S3 + CloudFront gives CORS errors when serving images from browser cache
+//https://stackoverflow.com/questions/33858072/aws-s3-cloudfront-gives-cors-errors-when-serving-images-from-browser-cache/42028071#42028071
 /**
  * Custom hook to enable complex properties on FLUID components.
  *
@@ -41,11 +42,18 @@ export const fluid = {
       legacy: 'https://fluid-dev.lmig.com/fluid/build/fluid.js',
       css: 'https://fluid-dev.lmig.com/fluid/build/fluid.css',
     },
+    // test: {
+    //   label: 'Test',
+    //   esm: 'https://fluid-test.lmig.com/fluid/build/fluid.esm.js',
+    //   legacy: 'https://fluid-test.lmig.com/fluid/build/fluid.js',
+    //   css: 'https://fluid-test.lmig.com/fluid/build/fluid.css',
+    // },
+    //direct access link and via a non-LM test application using the pre-production environment  (which is also externally facing).
     test: {
       label: 'Test',
-      esm: 'https://fluid-test.lmig.com/fluid/build/fluid.esm.js',
-      legacy: 'https://fluid-test.lmig.com/fluid/build/fluid.js',
-      css: 'https://fluid-test.lmig.com/fluid/build/fluid.css',
+      esm: 'https://d3vissazv1qzch.cloudfront.net/fluid/build/fluid.esm.js',
+      legacy: 'https://d3vissazv1qzch.cloudfront.net/fluid/build/fluid.js',
+      css: 'https://d3vissazv1qzch.cloudfront.net/fluid/build/fluid.css',
     },
     prod: {
       label: 'Production',
@@ -55,14 +63,15 @@ export const fluid = {
     },
     local: {
       label: 'Local',
-      esm: 'http://localhost:3333/build/my-first-stencil-project.esm.js',
-      legacy: 'http://localhost:3333/build/my-first-stencil-project.js',
-      css: 'http://localhost:3333/build/my-first-stencil-project.css',
+      esm: 'http://localhost:3333/fluid/build/fluid.esm.js',
+      legacy: 'http://localhost:3333/fluid/build/fluid.js',
+      css: 'http://localhost:3333/fluid/build/fluid.css',
     },
     external: {
       label: 'External',
-      esm: 'https://fluid.libertymutual.com/fluid/build/fluid.esm.js',
-      legacy: 'https://fluid.libertymutual.com/fluid/build/fluid.esm.js',
+      esm: 'https://dsfe50dspcxki.cloudfront.net/fluid/build/fluid.esm.js',
+      legacy: 'https://dsfe50dspcxki.cloudfront.net/fluid/build/fluid.js',
+      css: 'https://dsfe50dspcxki.cloudfront.net/fluid/build/fluid.css',
     },
   },
   init: (fluid: FluidEnvironment, opts?: any) => {
@@ -77,7 +86,7 @@ export const fluid = {
 
 // ========== IGNORE - replicating NPM package.
 
-const addScriptLoader = (fluid: FluidEnvironment) => {
+const addScriptLoader = (fluid:any) => {
   const script = document.createElement('script');
   script.id = 'fluid-loader-script';
   if ('noModule' in script) {
@@ -98,7 +107,7 @@ const addScriptLoader = (fluid: FluidEnvironment) => {
   }
 };
 
-const addStyleSheet = (fluid: FluidEnvironment) => {
+const addStyleSheet = (fluid:any) => {
   const element = document.createElement('link');
   element.setAttribute('rel', 'stylesheet');
   element.setAttribute('href', fluid.css);

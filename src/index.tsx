@@ -3,15 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-//import { useCustomElementRef, fluid } from './fluid'; // Replaced by @lmig/fluid-react-utils
-//import { useEffect, useRef } from 'react';
 import { defineCustomElements } from 'stenciljs-components/loader';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
-  // ---- Initialise FLUID
-// let env = fluid.environments.test;
-// useEffect(() => fluid.init(env), []);
-// ---- Start Building
 );
 // Initialize the custom elements
 defineCustomElements(window);

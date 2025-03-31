@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 /**
  * Custom hook to enable complex properties on FLUID components.
  *
- * https://github.com/lmigtech/fluid/tree/develop/common/tools/react/UseCustomElementRef.ts
+ * 
  */
 export function useCustomElementRef(customEvents: any = {}, props: any = {}) {
   const ref = useRef(null);

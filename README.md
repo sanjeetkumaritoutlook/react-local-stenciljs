@@ -18,7 +18,7 @@ curent version Teact v18.3
 use Function components along with Hooks, which were added in React 16.8.
 React 19 beta has support for custom Elements
 
-#With introduction to the React 16, writing functional components is the standard way of creating components in modern react applications.
+# With introduction to the React 16, writing functional components is the standard way of creating components in modern react applications.
 https://blog.weareredlight.com/the-rise-of-functional-components-react-v16-7-0-now-with-hooks-90cac72b8ab7?gi=27c595b1ced0
 
  

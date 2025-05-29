@@ -8,7 +8,7 @@ ost React applications are modeled on Flux design pattern).
 JSX is rewritten to JavaScript. This can be done with babel or webpack internals.
 
 Babel is used to transpile the JavaScript code, making it compatible with older browsers,
- while Webpack is used to bundle and optimize the code. 
+while Webpack is used to bundle and optimize the code. 
  
 # resulting file is then bundled for the browser, using either webpack or browserify
 
